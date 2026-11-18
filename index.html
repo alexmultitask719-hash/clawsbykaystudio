@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clawsbykaystudio | Nail Salon in Lekki Phase 1, Lagos</title>
+<meta name="description" content="Acrylic nails, stiletto nails, sculpted nails, manicures and nail art in Lekki Phase 1, Lagos. Book your appointment online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2A1230;      /* deep background */
+  --plum-soft:#4A2452;
+  --blush:#F9DCE3;     /* soft background */
+  --rose:#D9487A;      /* main accent */
+  --gold:#C9A24B;      /* details */
+  --white:#FFFDFE;
+  --ink:#2A1230;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.1;font-weight:700}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(42,18,48,.96);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none}
+.logo span{color:var(--gold)}
+.nav ul{display:flex;gap:26px;list-style:none}
+.nav ul a{color:var(--blush);text-decoration:none;font-weight:500;font-size:.95rem}
+.nav ul a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--rose);color:#fff;border:0;border-radius:999px;padding:14px 28px;font:700 1rem 'DM Sans',sans-serif;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#c23a69;transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:var(--plum)}
+.btn.gold:hover{background:#d8b360}
+.nav .btn{padding:10px 20px;font-size:.9rem}
+@media(max-width:760px){.nav ul{display:none}}
+
+/* Hero */
+.hero{background:radial-gradient(circle at 80% 20%,var(--plum-soft),var(--plum) 60%);color:var(--white);padding:70px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);margin-bottom:18px}
+.hero p{color:var(--blush);max-width:460px;font-size:1.1rem;margin-bottom:28px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.rating{margin-top:30px;color:var(--blush);font-size:.95rem}
+.rating b{color:var(--gold);font-size:1.1rem}
+.nails{display:flex;justify-content:center;align-items:flex-end;gap:10px;height:360px}
+.nail{width:58px;border:2px solid rgba(255,255,255,.25);position:relative;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.nail::after{content:"";position:absolute;top:8%;left:18%;width:22%;height:45%;border-radius:50%;background:rgba(255,255,255,.35)}
+.n1{height:230px;background:linear-gradient(#F3B6C6,var(--rose));clip-path:polygon(0 100%,0 38%,50% 0,100% 38%,100% 100%);animation-delay:.05s}
+.n2{height:300px;background:linear-gradient(#fff,#F9DCE3);clip-path:polygon(0 100%,0 30%,50% 0,100% 30%,100% 100%);animation-delay:.15s}
+.n3{height:340px;background:linear-gradient(#E2C275,var(--gold));clip-path:polygon(0 100%,0 40%,50% 0,100% 40%,100% 100%);animation-delay:.25s}
+.n4{height:290px;background:linear-gradient(#F9DCE3,#F3B6C6);clip-path:polygon(0 100%,0 30%,50% 0,100% 30%,100% 100%);animation-delay:.35s}
+.n5{height:210px;background:linear-gradient(#8B4A94,var(--plum-soft));clip-path:polygon(0 100%,0 38%,50% 0,100% 38%,100% 100%);animation-delay:.45s}
+@keyframes rise{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.nails{height:260px;transform:scale(.8)}}
+
+/* Sections */
+section{padding:80px 0}
+.title{margin-bottom:36px}
+.title h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:8px}
+.title p{color:#6b4d72;max-width:540px}
+
+/* Services */
+#services{background:var(--blush)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--white);border-radius:var(--radius);padding:24px;border-top:4px solid var(--rose)}
+.card:nth-child(3n+2){border-top-color:var(--gold)}
+.card:nth-child(3n){border-top-color:var(--plum-soft)}
+.card h3{font-size:1.5rem;margin-bottom:6px}
+.card p{font-size:.95rem;color:#5b4361;margin-bottom:16px}
+.card button{background:none;border:0;color:var(--rose);font:700 .95rem 'DM Sans',sans-serif;cursor:pointer;padding:0}
+.card button:hover{text-decoration:underline}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about ul{list-style:none;display:grid;gap:14px}
+.about li{padding-left:34px;position:relative}
+.about li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--gold)}
+.about li:nth-child(2)::before{background:var(--rose)}
+.about li:nth-child(3)::before{background:var(--plum-soft)}
+@media(max-width:820px){.about{grid-template-columns:1fr}}
+
+/* Booking */
+#booking{background:var(--plum);color:var(--white)}
+#booking .title p{color:var(--blush)}
+.form{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:30px;display:grid;gap:24px}
+fieldset{border:0}
+legend,label.l{font-weight:700;margin-bottom:10px;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input,.slot input{position:absolute;opacity:0;pointer-events:none}
+.chip span,.slot span{display:inline-block;padding:9px 16px;border:2px solid var(--blush);border-radius:999px;cursor:pointer;font-size:.92rem;transition:.15s}
+.chip input:checked+span{background:var(--rose);border-color:var(--rose);color:#fff}
+.slot input:checked+span{background:var(--plum);border-color:var(--plum);color:#fff}
+.slot input:disabled+span{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.chip input:focus-visible+span,.slot input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:620px){.row{grid-template-columns:1fr}}
+input[type=text],input[type=tel],input[type=date],textarea{width:100%;padding:13px 14px;border:2px solid var(--blush);border-radius:12px;font:inherit;background:#fff}
+input:focus,textarea:focus{border-color:var(--rose);outline:none}
+textarea{min-height:90px;resize:vertical}
+.error{color:#b3153f;font-weight:500;min-height:1.4em}
+.note{font-size:.85rem;color:#6b4d72}
+.done{display:none;background:var(--white);color:var(--ink);border-radius:var(--radius);padding:34px;text-align:center}
+.done h3{font-size:2rem;margin-bottom:10px}
+.done dl{display:inline-grid;grid-template-columns:auto auto;gap:6px 18px;text-align:left;margin:18px 0 24px}
+.done dt{font-weight:700;color:var(--rose)}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.contact div{background:var(--blush);border-radius:var(--radius);padding:24px}
+.contact h3{font-size:1.4rem;margin-bottom:6px}
+
+footer{background:var(--plum);color:var(--blush);text-align:center;padding:26px 20px;font-size:.9rem}
+footer b{color:var(--gold)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Claws<span>by</span>kay</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#booking">Book</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn" href="#booking">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Nails made to be noticed.</h1>
+        <p>Acrylics, stilettos, sculpted sets and custom nail art at Clawsbykaystudio in Lekki Phase 1, Lagos.</p>
+        <div class="actions">
+          <a class="btn" href="#booking">Book an appointment</a>
+          <a class="btn gold" href="#services">See services</a>
+        </div>
+        <p class="rating"><b>4.9</b> ★★★★★ from 50 Google reviews</p>
+      </div>
+      <div class="nails" aria-hidden="true">
+        <div class="nail n1"></div><div class="nail n2"></div><div class="nail n3"></div><div class="nail n4"></div><div class="nail n5"></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="title">
+        <h2>Our services</h2>
+        <p>Pick what you need and book it in one step.</p>
+      </div>
+      <div class="grid" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="title" style="margin:0">
+        <h2>A calm studio with a clean, careful finish.</h2>
+        <p>Every set starts with proper prep and ends with a finish you can show off. Walk in with a picture or an idea and we will build it.</p>
+      </div>
+      <ul>
+        <li><b>Rated 4.9 on Google.</b> Clients across Lekki keep coming back.</li>
+        <li><b>Every shape.</b> Stiletto, almond, square, sculpted and extensions.</li>
+        <li><b>Full care.</b> Repairs, polish changes and safe removal of synthetic nails.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="wrap">
+      <div class="title">
+        <h2>Book your appointment</h2>
+        <p>Choose your services, date and time. When you tap Book on WhatsApp, we open WhatsApp with your booking ready to send.</p>
+      </div>
+
+      <form class="form" id="bookingForm" novalidate>
+        <fieldset>
+          <legend>1. Choose your services</legend>
+          <div class="chips" id="serviceChips"></div>
+        </fieldset>
+
+        <div class="row">
+          <div>
+            <label class="l" for="date">2. Pick a date</label>
+            <input type="date" id="date" required>
+            <p class="note">We are closed on Sundays. Edit this in the code if that is not right.</p>
+          </div>
+          <fieldset>
+            <legend>3. Pick a time</legend>
+            <div class="chips" id="slots"></div>
+          </fieldset>
+        </div>
+
+        <div class="row">
+          <div>
+            <label class="l" for="name">4. Your name</label>
+            <input type="text" id="name" autocomplete="name" placeholder="Full name">
+          </div>
+          <div>
+            <label class="l" for="phone">Phone number</label>
+            <input type="tel" id="phone" autocomplete="tel" placeholder="0801 234 5678">
+          </div>
+        </div>
+
+        <div>
+          <label class="l" for="notes">Notes (optional)</label>
+          <textarea id="notes" placeholder="Shape, length, colours, or a design you have in mind"></textarea>
+        </div>
+
+        <p class="error" id="error" role="alert"></p>
+        <button class="btn" type="submit">Book on WhatsApp</button>
+      </form>
+
+      <div class="done" id="done" tabindex="-1">
+        <h3>Almost done, <span id="dName"></span>!</h3>
+        <p>If WhatsApp did not open, tap the button below to send your booking.</p>
+        <dl>
+          <dt>Services</dt><dd id="dServices"></dd>
+          <dt>Date</dt><dd id="dDate"></dd>
+          <dt>Time</dt><dd id="dTime"></dd>
+        </dl><br>
+        <a class="btn" id="waBtn" target="_blank" rel="noopener">Send on WhatsApp</a>
+        <p style="margin-top:18px"><button class="btn gold" id="again" type="button">Make another booking</button></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="title"><h2>Find us</h2></div>
+      <div class="contact">
+        <div>
+          <h3>Address</h3>
+          <p>Olawale Cole Onitiri Ave, Lekki Phase 1, Lagos</p>
+        </div>
+        <div>
+          <h3>Call or WhatsApp</h3>
+          <p><a href="tel:+2348168479909">0816 847 9909</a><br><a href="https://wa.me/2348168479909" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p>Open until 7 pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> <b>Clawsbykaystudio</b>. Lekki Phase 1, Lagos.</p>
+</footer>
+
+<script>
+/* ====== EDIT THESE ====== */
+const WHATSAPP = "2348168479909";          // country code + number, no + or spaces
+const OPEN_HOUR = 10, LAST_HOUR = 18;       // first and last appointment (24h clock)
+const CLOSED_DAYS = [0];                    // 0 = Sunday, 1 = Monday ... 6 = Saturday
+
+const SERVICES = [
+  ["Manicure","A clean, neat finish for natural nails."],
+  ["Acrylic nails","Strong, long-lasting sets in the length you want."],
+  ["Nail cut & filing","Trimmed and shaped to your preferred form."],
+  ["Nail designs","Colours, patterns and detail work made for you."],
+  ["Nail extensions","Add length and shape to your natural nails."],
+  ["Nail painting","Smooth, even colour in any shade."],
+  ["Nail polish changes","A fresh colour without a full new set."],
+  ["Nail repair","Fix a chip, crack or broken nail."],
+  ["Polish removal","Gentle removal that keeps nails healthy."],
+  ["Sculpted nails","Hand-sculpted shape with a natural look."],
+  ["Stiletto nails","Sharp, dramatic points with a flawless finish."],
+  ["Synthetic nail removal","Safe removal of acrylics and extensions."]
+];
+
+/* ====== SERVICES ====== */
+const grid = document.getElementById("serviceGrid");
+const chips = document.getElementById("serviceChips");
+SERVICES.forEach(([name, text], i) => {
+  grid.insertAdjacentHTML("beforeend",
+    `<div class="card"><h3>${name}</h3><p>${text}</p><button type="button" data-i="${i}">Book this</button></div>`);
+  chips.insertAdjacentHTML("beforeend",
+    `<label class="chip"><input type="checkbox" name="service" value="${name}" id="s${i}"><span>${name}</span></label>`);
+});
+grid.addEventListener("click", e => {
+  const b = e.target.closest("button[data-i]");
+  if (!b) return;
+  document.getElementById("s" + b.dataset.i).checked = true;
+  document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+});
+
+/* ====== DATE + TIME ====== */
+const dateInput = document.getElementById("date");
+const slotsBox = document.getElementById("slots");
+const pad = n => String(n).padStart(2, "0");
+const today = new Date();
+dateInput.min = `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+const label = h => `${h % 12 || 12}:00 ${h < 12 ? "AM" : "PM"}`;
+
+function buildSlots(){
+  slotsBox.innerHTML = "";
+  const val = dateInput.value;
+  if (!val) { slotsBox.innerHTML = '<p class="note">Choose a date first.</p>'; return; }
+  const d = new Date(val + "T00:00");
+  if (CLOSED_DAYS.includes(d.getDay())) { slotsBox.innerHTML = '<p class="error">We are closed that day. Please pick another date.</p>'; return; }
+  const isToday = val === dateInput.min;
+  for (let h = OPEN_HOUR; h <= LAST_HOUR; h++) {
+    const past = isToday && h <= new Date().getHours();
+    slotsBox.insertAdjacentHTML("beforeend",
+      `<label class="slot"><input type="radio" name="time" value="${label(h)}" ${past ? "disabled" : ""}><span>${label(h)}</span></label>`);
+  }
+}
+dateInput.addEventListener("change", buildSlots);
+buildSlots();
+
+/* ====== SUBMIT ====== */
+const form = document.getElementById("bookingForm");
+const done = document.getElementById("done");
+const err = document.getElementById("error");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const services = [...form.querySelectorAll('input[name=service]:checked')].map(x => x.value);
+  const time = (form.querySelector('input[name=time]:checked') || {}).value;
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const notes = document.getElementById("notes").value.trim();
+  const dateVal = dateInput.value;
+
+  if (!services.length) return err.textContent = "Choose at least one service.";
+  if (!dateVal) return err.textContent = "Pick a date.";
+  if (!time) return err.textContent = "Pick a time.";
+  if (!name) return err.textContent = "Enter your name.";
+  if (phone.replace(/\D/g, "").length < 10) return err.textContent = "Enter a valid phone number.";
+  err.textContent = "";
+
+  const niceDate = new Date(dateVal + "T00:00").toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long", year:"numeric"});
+  const msg = `Hello Clawsbykaystudio, I would like to book.\n\nName: ${name}\nPhone: ${phone}\nServices: ${services.join(", ")}\nDate: ${niceDate}\nTime: ${time}` + (notes ? `\nNotes: ${notes}` : "");
+
+  document.getElementById("dName").textContent = name.split(" ")[0];
+  document.getElementById("dServices").textContent = services.join(", ");
+  document.getElementById("dDate").textContent = niceDate;
+  document.getElementById("dTime").textContent = time;
+  document.getElementById("waBtn").href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+  form.style.display = "none";
+  done.style.display = "block";
+  done.focus();
+  window.location.href = document.getElementById("waBtn").href;   // go straight to WhatsApp
+});
+
+document.getElementById("again").addEventListener("click", () => {
+  form.reset(); buildSlots();
+  done.style.display = "none"; form.style.display = "grid";
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
